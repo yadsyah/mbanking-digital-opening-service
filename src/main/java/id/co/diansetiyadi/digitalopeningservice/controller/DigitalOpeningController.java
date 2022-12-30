@@ -1,5 +1,6 @@
 package id.co.diansetiyadi.digitalopeningservice.controller;
 
+import id.co.diansetiyadi.digitalopeningservice.dto.request.SubmitApplyOpeningRequest;
 import id.co.diansetiyadi.digitalopeningservice.dto.request.ValidationApplyOpeningRequest;
 import id.co.diansetiyadi.digitalopeningservice.dto.response.BaseResponse;
 import id.co.diansetiyadi.digitalopeningservice.service.DigitalOpeningService;
@@ -18,7 +19,6 @@ import java.util.UUID;
 @Slf4j
 public class DigitalOpeningController {
 
-
     private final DigitalOpeningService digitalOpeningService;
 
     @Autowired
@@ -34,6 +34,17 @@ public class DigitalOpeningController {
                         .traceId(UUID.randomUUID().toString())
                         .message("Success")
                         .data(digitalOpeningService.validationApply(validationApplyOpeningRequest))
+                .build());
+    }
+
+    @PostMapping("/submit-apply")
+    @ResponseBody
+    public Mono<BaseResponse> submitApply(@RequestBody @Valid SubmitApplyOpeningRequest request) {
+        return Mono.just(BaseResponse.builder()
+                        .responseCode("00")
+                        .traceId(UUID.randomUUID().toString())
+                        .message("Success")
+                        .data(digitalOpeningService.submitApplication(request))
                 .build());
     }
 }
