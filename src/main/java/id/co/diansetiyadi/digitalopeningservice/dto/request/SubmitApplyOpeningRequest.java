@@ -26,4 +26,12 @@ public class SubmitApplyOpeningRequest extends BaseRequest {
     private String age;
     private PersonalLoan personalLoan;
 
+
+    public boolean getIsExistBank() {
+        return isExistBank;
+    }
+
+    public void setIsExistBank(boolean existBank) {
+        isExistBank = existBank;
+    }
 }
