@@ -28,4 +28,6 @@ public class DigitalOpeningApply {
     private StatusApplyEnum status;
     @Column(name = "list_product_apply", length = 100)
     private String listProductApply;
+    @Column(name = "deviceId", length = 50)
+    private String deviceId;
 }

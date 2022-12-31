@@ -1,8 +1,10 @@
 package id.co.diansetiyadi.digitalopeningservice.service.impl;
 
 import com.google.gson.Gson;
+import id.co.diansetiyadi.digitalopeningservice.dto.request.InquiryDigitalOpeningApplyRequest;
 import id.co.diansetiyadi.digitalopeningservice.dto.request.SubmitApplyOpeningRequest;
 import id.co.diansetiyadi.digitalopeningservice.dto.request.ValidationApplyOpeningRequest;
+import id.co.diansetiyadi.digitalopeningservice.dto.response.InquiryDigitalOpeningApplyResponse;
 import id.co.diansetiyadi.digitalopeningservice.dto.response.SubmitApplyOpeningResponse;
 import id.co.diansetiyadi.digitalopeningservice.dto.response.ValidationApplyOpeningResponse;
 import id.co.diansetiyadi.digitalopeningservice.entity.DigitalOpeningApply;
@@ -15,6 +17,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 @Slf4j
@@ -58,6 +63,22 @@ public class DigitalOpeningServiceImpl implements DigitalOpeningService {
     @Override
     public ValidationApplyOpeningResponse validationApply(ValidationApplyOpeningRequest request) {
         return null;
+    }
+
+    @Override
+    public List<InquiryDigitalOpeningApplyResponse> inquiryDigitalOpeningApply(InquiryDigitalOpeningApplyRequest request) {
+        List<DigitalOpeningApply> digitalOpeningApplyList = digitalOpeningApplyRepository.findByDeviceId(request.getDeviceId());
+        List<InquiryDigitalOpeningApplyResponse> inquiryDigitalOpeningApplyResponses = new ArrayList<>();
+        for (DigitalOpeningApply doa: digitalOpeningApplyList) {
+            inquiryDigitalOpeningApplyResponses.add(InquiryDigitalOpeningApplyResponse.builder()
+                            .cif(doa.getCif())
+                            .listProduct(doa.getListProductApply())
+                            .statusApply(doa.getStatus())
+                            .reffCode(doa.getReffCode())
+                    .build());
+        }
+
+        return inquiryDigitalOpeningApplyResponses;
     }
 
     private void sendNotificationInbox(String message) {
