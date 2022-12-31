@@ -7,19 +7,14 @@
         <Property name="kafka.topic.logs">logs</Property>
     </Properties>
     <Appenders>
-        <Kafka name="kafkaLogAppender" topic="digital-opening-log">
+        <Kafka name="kafkaLogAppender" topic="digital-opening-log" ignoreExceptions="false">
             <JSONLayout />
             <Property name="bootstrap.servers">${bootstrap.servers}</Property>
             <MarkerFilter marker="AuditRecord" onMatch="DENY" onMismatch="ACCEPT"/>
         </Kafka>
-
-                <Async name="Async">
+        <Async name="Async">
             <AppenderRef ref="kafkaLogAppender"/>
         </Async>
-
-        <File>
-
-        </File>
 
         <Console name="stdout" target="SYSTEM_OUT">
             <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5p [%-7t] %F:%L - %m%n"/>
@@ -31,6 +26,6 @@
             <AppenderRef ref="kafkaLogAppender"/>
             <AppenderRef ref="stdout"/>
         </Root>
-        <Logger name="org.apache.kafka" level="WARN" />
+        <Logger name="org.apache.kafka" level="INFO" />
     </Loggers>
 </Configuration>
