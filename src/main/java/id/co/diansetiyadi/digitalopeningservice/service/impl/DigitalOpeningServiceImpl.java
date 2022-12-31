@@ -14,6 +14,8 @@ import id.co.diansetiyadi.digitalopeningservice.util.DigitalOpeningConstant;
 import id.co.diansetiyadi.digitalopeningservice.util.DigitalOpeningHelper;
 import id.co.diansetiyadi.digitalopeningservice.util.StatusApplyEnum;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
@@ -24,7 +26,7 @@ import java.util.List;
 @Service
 @Slf4j
 public class DigitalOpeningServiceImpl implements DigitalOpeningService {
-
+    private static final Logger logger = LoggerFactory.getLogger(DigitalOpeningServiceImpl.class);
     private final Gson gson;
     private final KafkaTemplate<String, String> kafkaTemplate;
     private final DigitalOpeningApplyRepository digitalOpeningApplyRepository;
@@ -62,6 +64,7 @@ public class DigitalOpeningServiceImpl implements DigitalOpeningService {
 
     @Override
     public ValidationApplyOpeningResponse validationApply(ValidationApplyOpeningRequest request) {
+        logger.info("Validation Apply");
         return null;
     }
 

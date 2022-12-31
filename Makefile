@@ -37,3 +37,6 @@ docker-build-embed-tomcat:
 	- docker build -f docker/Dockerfile -t $(APP):embed-$(VERSION) .
 docker-push:
 	- docker tag $(APP):embed-$(VERSION) $(MY_HUB_DOCKER)/$(APP):embed-$(VERSION)
+docker-push-latest:
+	- male docker=build-embed-tomcat
+	- docker tag $(APP):embed-$(VE  RSION) $(MY_HUB_DOCKER)/$(APP):$(VERSION_BRANCH)-latest

@@ -13,8 +13,6 @@ import org.springframework.web.reactive.config.EnableWebFlux;
 @SpringBootApplication
 @EnableWebFlux
 @EnableKafka
-@EnableJpaRepositories
-@EntityScan("id.co.diansetiyadi.digitalopeningservice.entity")
 @EnableJpaAuditing
 public class DigitalOpeningServiceApplication {
 
