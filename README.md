@@ -10,7 +10,7 @@
 
 ## Domain API's
 
-- `/submit` = Submit Apply Product
+- `/submit-apply` = Submit Apply Product
 - `/validation` = Validation Apply Product
 
 ## How's to Run Local
@@ -19,6 +19,11 @@
 
 - `make run-docker-local`
 - `make run-spring-boot`
+- `make docker-push-latest`
+- `make docker-push`
+- `make maven-verify`
+- `make list`
+- `make docker-build-embed-tomcat`
 
 ## ContactMe
 
