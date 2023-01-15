@@ -12,7 +12,6 @@ import java.util.List;
 
 public interface DigitalOpeningService {
 
-    void sendNotification();
     SubmitApplyOpeningResponse submitApplication(SubmitApplyOpeningRequest request);
     ValidationApplyOpeningResponse validationApply(ValidationApplyOpeningRequest request);
     List<InquiryDigitalOpeningApplyResponse> inquiryDigitalOpeningApply(InquiryDigitalOpeningApplyRequest request);

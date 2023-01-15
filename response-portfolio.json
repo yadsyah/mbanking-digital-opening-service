@@ -1,0 +1,153 @@
+{
+  "CustomerPortofolioInqByGCNRs" : {
+    "Status" : {
+      "StatusCode" : "00",
+      "StatusDesc" : "SUCCESS",
+      "AdditionalStatus" : [ {
+        "SystemId" : "ODS",
+        "StatusCode" : "00",
+        "StatusDesc" : "SUCCESS"
+      } ]
+    },
+    "MsgRsHdr" : {
+      "RqUID" : "b57bbff2-f071-4dc9-bba1-73c82c09ef4c",
+      "ChannelId" : "948",
+      "TraceNumber" : "091966",
+      "TerminalId" : "66560",
+      "ProcessingCode" : "309000",
+      "ResponseTimestamp" : "2023-01-14T09:52:48.294+07:00",
+      "UserId" : "",
+      "BranchTerminalId" : "",
+      "PointOfServiceData" : {
+        "Environment" : "PMOBILE",
+        "POSEntryCode" : "018",
+        "POSConditionCode" : "15"
+      }
+    },
+    "CustId" : {
+      "GCN" : "KIQ0620000000001"
+    },
+    "CustPortfolioInfo" : [ {
+      "CIF" : "K002RYS",
+      "AccountNo" : "9919872516",
+      "AccountStatus" : "1",
+      "DataSource" : "JHA",
+      "AccountCurrency" : "IDR",
+      "ProductType" : "AQ",
+      "ProductFamily" : "SavingO",
+      "ProductDesc" : "",
+      "CardNumber" : "",
+      "CardStatus" : ""
+    }, {
+      "CIF" : "K0024IY",
+      "AccountNo" : "5185849300",
+      "AccountStatus" : "1",
+      "DataSource" : "JHA",
+      "AccountCurrency" : "IDR",
+      "ProductType" : "WZ",
+      "ProductFamily" : "SavingO",
+      "ProductDesc" : "",
+      "CardNumber" : "",
+      "CardStatus" : ""
+    }, {
+      "CIF" : "K002JTE",
+      "AccountNo" : "9922538244",
+      "AccountStatus" : "4",
+      "DataSource" : "JHA",
+      "AccountCurrency" : "IDR",
+      "ProductType" : "N1",
+      "ProductFamily" : "SavingO",
+      "ProductDesc" : "",
+      "CardNumber" : "",
+      "CardStatus" : ""
+    }, {
+      "CIF" : "K0025GS",
+      "AccountNo" : "9907848067",
+      "AccountStatus" : "1",
+      "DataSource" : "JHA",
+      "AccountCurrency" : "IDR",
+      "ProductType" : "FP",
+      "ProductFamily" : "SavingO",
+      "ProductDesc" : "",
+      "CardNumber" : "",
+      "CardStatus" : ""
+    }, {
+      "CIF" : "K0024IY",
+      "AccountNo" : "7396562",
+      "AccountStatus" : "1",
+      "DataSource" : "JHA",
+      "AccountCurrency" : "IDR",
+      "ProductType" : "KP",
+      "ProductFamily" : "SavingO",
+      "ProductDesc" : "",
+      "CardNumber" : "",
+      "CardStatus" : ""
+    }, {
+      "CIF" : "K002JTE",
+      "AccountNo" : "9907004217",
+      "AccountStatus" : "1",
+      "DataSource" : "JHA",
+      "AccountCurrency" : "IDR",
+      "ProductType" : "FQ",
+      "ProductFamily" : "SavingO",
+      "ProductDesc" : "",
+      "CardNumber" : "",
+      "CardStatus" : ""
+    }, {
+      "CIF" : "K002VIF",
+      "AccountNo" : "4127882075",
+      "AccountStatus" : "1",
+      "DataSource" : "JHA",
+      "AccountCurrency" : "IDR",
+      "ProductType" : "O3",
+      "ProductFamily" : "SavingO",
+      "ProductDesc" : "",
+      "CardNumber" : "",
+      "CardStatus" : ""
+    }, {
+      "CIF" : "K0027AH",
+      "AccountNo" : "9903733893",
+      "AccountStatus" : "1",
+      "DataSource" : "JHA",
+      "AccountCurrency" : "IDR",
+      "ProductType" : "KX",
+      "ProductFamily" : "SavingO",
+      "ProductDesc" : "",
+      "CardNumber" : "",
+      "CardStatus" : ""
+    }, {
+      "CIF" : "K002VIF",
+      "AccountNo" : "9920928576",
+      "AccountStatus" : "1",
+      "DataSource" : "JHA",
+      "AccountCurrency" : "IDR",
+      "ProductType" : "YO",
+      "ProductFamily" : "SavingO",
+      "ProductDesc" : "",
+      "CardNumber" : "",
+      "CardStatus" : ""
+    }, {
+      "CIF" : "K0027AH",
+      "AccountNo" : "9908569358",
+      "AccountStatus" : "1",
+      "DataSource" : "JHA",
+      "AccountCurrency" : "IDR",
+      "ProductType" : "KX",
+      "ProductFamily" : "SavingO",
+      "ProductDesc" : "",
+      "CardNumber" : "",
+      "CardStatus" : ""
+    }, {
+      "CIF" : "K002VIF",
+      "AccountNo" : "4127882083",
+      "AccountStatus" : "1",
+      "DataSource" : "JHA",
+      "AccountCurrency" : "IDR",
+      "ProductType" : "O4",
+      "ProductFamily" : "SavingO",
+      "ProductDesc" : "",
+      "CardNumber" : "",
+      "CardStatus" : ""
+    } ]
+  }
+}
