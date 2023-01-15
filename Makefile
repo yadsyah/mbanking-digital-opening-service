@@ -26,5 +26,5 @@ docker-push:
 	- docker push $(MY_HUB_DOCKER)/$(APP):$(VERSION_BRANCH)-latest
 docker-push-latest:
 	- make docker-build-embed-tomcat
-	- docker tag $(APP):embed-$(VERSION) $(MY_HUB_DOCKER)/$(APP):$(VERSION_BRANCH)-latest
+	- docker tag $(MY_HUB_DOCKER)/$(APP):$(VERSION_BRANCH)-latest $(MY_HUB_DOCKER)/$(APP):$(VERSION_BRANCH)-latest
 	- docker push $(MY_HUB_DOCKER)/$(APP):$(VERSION_BRANCH)-latest
