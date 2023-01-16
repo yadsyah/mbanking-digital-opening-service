@@ -9,8 +9,6 @@ MY_HUB_DOCKER ?= diyset
 .PHONY: list
 clean:
 	@echo "Clean All Container"
-	- docker rm -f $($DB_IMAGE)
-	- docker rm -f $(DB_IMAGE_TEST)
 	- docker rm -f $(APP)
 list:
 	@echo "Make sure u set specific target dude !!"
@@ -31,6 +29,6 @@ docker-push:
 	- docker tag $(MY_HUB_DOCKER)/$(APP):$(VERSION_BRANCH)-latest $(MY_HUB_DOCKER)/$(APP):$(VERSION_BRANCH)-latest
 	- docker push $(MY_HUB_DOCKER)/$(APP):$(VERSION_BRANCH)-latest
 docker-push-latest:
-	- make docker-build-embed-tomcat
+	- make docker-build
 	- docker tag $(MY_HUB_DOCKER)/$(APP):$(VERSION_BRANCH)-latest $(MY_HUB_DOCKER)/$(APP):$(VERSION_BRANCH)-latest
 	- docker push $(MY_HUB_DOCKER)/$(APP):$(VERSION_BRANCH)-latest
