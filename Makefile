@@ -22,10 +22,10 @@ run-spring-boot:
 compile:
 	- mvn clean install -Dmaven.test.skip
 docker-build:
-	- docker build -f docker/without-build.Dockerfile -t $(MY_HUB_DOCKER)/$(APP):$(VERSION_BRANCH)-latest .
+	- docker build -f docker/Dockerfile -t $(MY_HUB_DOCKER)/$(APP):$(VERSION_BRANCH)-latest .
 docker-build-without-compile:
 	- make compile
-	- docker build -f docker/Dockerfile -t $(MY_HUB_DOCKER)/$(APP):$(VERSION_BRANCH)-latest .
+	- docker build -f docker/without-build.Dockerfile -t $(MY_HUB_DOCKER)/$(APP):$(VERSION_BRANCH)-latest .
 docker-push:
 	- make docker-build-without-compile
 	- docker tag $(MY_HUB_DOCKER)/$(APP):$(VERSION_BRANCH)-latest $(MY_HUB_DOCKER)/$(APP):$(VERSION_BRANCH)-latest
